@@ -1,0 +1,81 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scrollbars="vertical"
+	android:fillViewport="true">
+<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:stretchColumns="1">
+    <TableRow>
+        <TextView android:id="@id/tv_trial"
+        	android:layout_width="0.0dip"
+        	android:text=""
+        	android:layout_weight="2.0"
+        	android:gravity="center"
+        	style="@style/bigText"
+        />
+    </TableRow>
+    <TableRow>
+        <Button android:id="@id/but_play_a"
+        	android:layout_width="0.0dip"
+        	android:text="Play A"
+        	android:layout_weight="1.0"
+        	android:onClick="butPlayA"
+        	style="@style/bigText.Black"
+        />
+    </TableRow>
+    <TableRow>
+        <Button android:id="@id/but_play_x"
+        	android:layout_width="0.0dip"
+        	android:text="Play X"
+        	android:layout_weight="1.0"
+        	android:onClick="butPlayX"
+        	style="@style/bigText.Blue"
+        />
+    </TableRow>
+    <TableRow>
+        <Button android:id="@id/but_play_b"
+        	android:layout_width="0.0dip"
+        	android:text="Play B"
+        	android:layout_weight="1.0"
+        	android:onClick="butPlayB"
+        	style="@style/bigText.Black"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+        	android:layout_width="0.0dip"
+        	android:text="- - - - - - - -"
+        	android:layout_weight="2.0"
+        	android:gravity="center"
+        	style="@style/bigText"
+        />
+    </TableRow>
+    <TableRow>
+        <Button
+        	android:layout_width="0.0dip"
+        	android:text="X is A"
+        	android:layout_weight="1.0"
+        	android:onClick="butXisA"
+        	style="@style/bigText.Red"
+        />
+        <Button
+        	android:layout_width="0.0dip"
+        	android:text="X is B"
+        	android:layout_weight="1.0"
+        	android:onClick="butXisB"
+        	style="@style/bigText.Red"
+        />
+    </TableRow>
+    <TableRow>
+        <Button
+        	android:layout_width="0.0dip"
+        	android:text="Results"
+        	android:layout_weight="1.0"
+        	android:onClick="butResults"
+        	style="@style/bigText.Black"
+        />
+    </TableRow>
+</TableLayout>
+</ScrollView>

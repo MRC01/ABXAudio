@@ -1,0 +1,18 @@
+<resources>
+    <item type="id" name="cbox_showresults"/>
+    <item type="id" name="tv_switchdelay"/>
+    <item type="id" name="sbar_switchdelay"/>
+    <item type="id" name="etxt_clipdir"/>
+    <item type="id" name="etxt_clippath"/>
+    <item type="id" name="sbar_cliplevel"/>
+    <item type="id" name="tv_resultstrials"/>
+    <item type="id" name="tv_resultsptile"/>
+    <item type="id" name="tv_trial"/>
+    <item type="id" name="tv_instruct"/>
+    <item type="id" name="but_play_a"/>
+    <item type="id" name="but_play_b"/>
+    <item type="id" name="but_play_x"/>
+    <item type="id" name="tv_cliplevel"/>
+    <item type="id" name="cbox_syncplay"/>
+    <item type="id" name="cbox_randomab"/>
+</resources>

@@ -1,0 +1,82 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scrollbars="vertical"
+	android:fillViewport="true">
+<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:stretchColumns="1">
+    <TableRow>
+        <Button
+        	android:layout_width="0.0dip"
+        	android:text="Path"
+        	android:layout_weight="1.0"
+        	android:onClick="butSetPath"
+        	style="@style/bigText.Black"
+        />
+        <EditText android:id="@id/etxt_clippath"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="3.0"
+        />
+    </TableRow>
+    <TableRow>
+        <Button
+        	android:layout_width="0.0dip"
+        	android:text="Set Default Path"
+        	android:layout_weight="1.0"
+        	android:onClick="butSetDefaultPath"
+        	style="@style/bigText.Black"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+      		android:text="Volume"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        	style="@style/bigText"
+        />
+        <TextView android:id="@id/tv_cliplevel"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="3.0"
+        	style="@style/bigText"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+      		android:text=""
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        />
+        <SeekBar android:id="@id/sbar_cliplevel"
+        	android:layout_width="0.0dip"
+        	android:max="1000"
+        	android:layout_weight="10.0"
+        	android:gravity="center"
+        />
+        <TextView
+      		android:text=""
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        />
+    </TableRow>
+    <TableRow>
+        <Button
+        	android:layout_width="0.0dip"
+        	android:text="Max Volume"
+        	android:layout_weight="1.0"
+        	android:onClick="butVolume"
+        	style="@style/bigText.Black"
+        />
+    </TableRow>
+    <TableRow>
+        <Button
+        	android:layout_width="0.0dip"
+        	android:text="Play-Test"
+        	android:layout_weight="1.0"
+        	android:onClick="butPlay"
+        	style="@style/bigText.Red"
+        />
+    </TableRow>
+</TableLayout>
+</ScrollView>

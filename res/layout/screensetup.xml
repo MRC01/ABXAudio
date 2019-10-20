@@ -1,0 +1,92 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scrollbars="vertical"
+	android:fillViewport="true">
+<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:stretchColumns="1">
+    <TableRow>
+        <TextView
+        	android:layout_width="0.0dip"
+        	android:text="Show Results"
+        	android:layout_weight="2.0"
+        	style="@style/bigText"
+        />
+        <CheckBox android:id="@id/cbox_showresults"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        	style="@style/bigText"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+        	android:layout_width="0.0dip"
+        	android:text="Sync Play"
+        	android:layout_weight="2.0"
+        	style="@style/bigText"
+        />
+        <CheckBox android:id="@id/cbox_syncplay"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        	style="@style/bigText"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+        	android:layout_width="0.0dip"
+        	android:text="Randomize A &amp; B"
+        	android:layout_weight="2.0"
+        	style="@style/bigText"
+        />
+        <CheckBox android:id="@id/cbox_randomab"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        	style="@style/bigText"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+      		android:text="Switch Delay"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="2.0"
+        	style="@style/bigText"
+        />
+        <TextView android:id="@id/tv_switchdelay"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="2.0"
+        	style="@style/bigText"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+      		android:text=""
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        />
+        <SeekBar android:id="@id/sbar_switchdelay"
+        	android:layout_width="0.0dip"
+        	android:max="1000"
+        	android:layout_weight="10.0"
+        />
+        <TextView
+      		android:text=""
+        	android:layout_width="0.0dip"
+        	android:layout_weight="1.0"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+        	android:layout_width="0.0dip"
+        	android:text="Clip Dir"
+        	android:layout_weight="1.0"
+        	style="@style/bigText"
+        />
+        <EditText android:id="@id/etxt_clipdir"
+        	android:layout_width="0.0dip"
+        	android:layout_weight="4.0"
+        />
+    </TableRow>
+</TableLayout>
+</ScrollView>

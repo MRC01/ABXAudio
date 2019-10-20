@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ABXAudio</string>
+	<string name="instruct">
+	<![CDATA[
+<i><b>SETUP</b></i>
+<p>
+All settings are automatically persisted.
+<p>
+<b><i>Show Results</i></b>: whether to show test results during the test.
+You can always see results on the Results screen.
+This determines whether they also show up on the test screen.
+<p>
+<b><i>Sync Play</i></b>: whether to synchronize play during the test.
+When checked, the play position of the clips is synchronized;
+they all play at the same position as you switch back and forth.
+Otherwise (when not checked), each clip remembers its individual play position,
+saves that position when you switch to another clip,
+and resumes at that position when you switch back to it.
+<p>
+<b><i>Switch Delay</i></b>: how long to delay (silence) when switching A/B/X.
+Setting this to 0 means instantaneous switching which makes it easier to hear differences.
+<p>
+<b><i>Clip Dir</i></b>: default directory for clip files.
+This defaults to the standard <b>downloads</b> directory on your device.
+This setting exists only to make it faster and easier to select clips.
+On the Clip screen, you can ignore this and enter any path you want.
+<p>
+<i><b>CLIPS</i></b>
+<p>
+<b><i>Path</i></b>: where on your device filesystem to load the clip.
+This can be anywhere.
+You can select a wide variety of different audio files.
+On most devices, this includes WAV, MP3, AAC, FLAC, and others.
+<p>
+<b><i>Volume</i></b>: at what volume to play the clip during the test.
+Default is 0 dB, which means play the clip unchanged at its inherent level.
+To prevent any potential problems with clipping, you can play the clip quieter, but not louder.
+This setting is used to level match clips.
+<p>
+<b><i>Support</i></b>: Visit the web site for more info and detailed instructions:
+<br>
+http://mclements.net/clementslogic/abxAudio.html
+	]]>
+</string>
+</resources>

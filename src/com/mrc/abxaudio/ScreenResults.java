@@ -1,6 +1,5 @@
 /* Copyright 2014 by Michael R. Clements
- * This source code is the intellectual property of the author.
- * This is not open source. All rights reserved.
+ * This software is open source and free to distribute and create derivative works.
 */
 package com.mrc.abxaudio;
 

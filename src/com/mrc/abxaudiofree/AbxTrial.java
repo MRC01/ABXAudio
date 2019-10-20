@@ -1,7 +1,7 @@
 /* Copyright 2014 by Michael R. Clements
  * This software is open source and free to distribute and create derivative works.
 */
-package com.mrc.abxaudio;
+package com.mrc.abxaudiofree;
 
 /* A single trial in an AbxTest
 */

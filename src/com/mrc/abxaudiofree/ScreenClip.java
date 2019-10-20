@@ -1,7 +1,7 @@
 /* Copyright 2014 by Michael R. Clements
  * This software is open source and free to distribute and create derivative works.
 */
-package com.mrc.abxaudio;
+package com.mrc.abxaudiofree;
 
 import com.mrc.util.*;
 
@@ -143,7 +143,7 @@ public class ScreenClip extends Activity implements SeekBar.OnSeekBarChangeListe
 	protected String levelStringFromVal(int val) {
 		double	valPct, valDb;
 
-		valPct = (double)val / (double)Config.get().levelRange;
+		valPct = (double)val / (double)Config.levelRange;
 		valDb = Math.log10(valPct) * 20.0;
 		return String.format("%.1f Db  %.0f %c", valDb, valPct * 100.0, '%');
 	}

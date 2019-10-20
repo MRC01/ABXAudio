@@ -58,7 +58,7 @@
         />
     </application>
 
-	<!-- Android min version: 2.3.3 (10), target: 8.1.0 (27) -->
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="27"/>
+	<!-- Android min version: 2.3.3 (10), target: 9.0 (28) -->
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="28"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 </manifest>

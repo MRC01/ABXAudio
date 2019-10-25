@@ -17,7 +17,7 @@ public class Config {
 							clipNameB = "clipB";	// field name for clip B (accessed via reflection)
 	static Config			self;
 	static {
-		Util.APP_DIR = "com.mrc.abxaudio";
+		Util.APP_DIR = "com.mrc.abxaudiofree";
 		self = new Config();
 	}
 

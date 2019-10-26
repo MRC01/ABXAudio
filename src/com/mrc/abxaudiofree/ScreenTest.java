@@ -34,7 +34,6 @@ public class ScreenTest extends Activity {
 		butPlayX = (Button)findViewById(R.id.but_play_x);
 		test = new AbxTest();
 		newTrial();
-		isPlaying = null;
 	}
 
     protected void onDestroy() {
@@ -56,30 +55,36 @@ public class ScreenTest extends Activity {
 
 	// button callback: play clip A
 	public void butPlayA(View pView) {
+		trial.start();
 		unfocusAll();
-		colorButtons();
-		Util.sleep(Config.get().switchDelay);
 		savePos();
+		colorButtons();
+		if(Config.get().switchDelay > 0)
+			Util.sleep(Config.get().switchDelay);
 		focus(WhichClip.A);
 		butPlayA.setTextColor(Color.GREEN);
 	}
 
 	// button callback: play clip B
 	public void butPlayB(View pView) {
+		trial.start();
 		unfocusAll();
-		colorButtons();
-		Util.sleep(Config.get().switchDelay);
 		savePos();
+		colorButtons();
+		if(Config.get().switchDelay > 0)
+			Util.sleep(Config.get().switchDelay);
 		focus(WhichClip.B);
 		butPlayB.setTextColor(Color.GREEN);
 	}
 
 	// button callback: play clip X
 	public void butPlayX(View pView) {
+		trial.start();
 		unfocusAll();
-		colorButtons();
-		Util.sleep(Config.get().switchDelay);
 		savePos();
+		colorButtons();
+		if(Config.get().switchDelay > 0)
+			Util.sleep(Config.get().switchDelay);
 		focus(WhichClip.X);
 		butPlayX.setTextColor(Color.GREEN);
 	}
@@ -103,6 +108,7 @@ public class ScreenTest extends Activity {
 	}
 
 	// Save the pos of the currently playing clip (A, B or X)
+	// If play is synced, do nothing.
 	protected void savePos() {
 		if(!Config.get().syncPlay) {
 			if(isPlaying != null) {
@@ -138,8 +144,7 @@ public class ScreenTest extends Activity {
 		trialsCorrect = test.getTrialsCorrect();
 
 		trial = test.newTrial();
-		initSound(trial.clipA.sound);
-		initSound(trial.clipB.sound);
+		isPlaying = null;
 		posA = posB = posX = 0;
 		if(Config.get().showResults)
 			msg = "Trials: " + trialsCorrect + " for " + trialsComplete;
@@ -181,15 +186,6 @@ public class ScreenTest extends Activity {
 		else {
 			trial.clipA.sound.pause();
 			trial.clipB.sound.pause();
-		}
-	}
-
-	protected void initSound(SoundLong s) {
-		s.stop();
-		s.unMute();
-		if(Config.get().syncPlay) {
-			s.mute();
-			s.play();
 		}
 	}
 }

@@ -14,6 +14,10 @@ public class ScreenMain extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.screenmain);
+
+		// Ensure user has granted storage permissions to read/write my config
+		// If already granted, this does nothing
+		Permissions.confirmPermissions(this);
 		try {
 			Config.get().load();
 		}
@@ -31,9 +35,17 @@ public class ScreenMain extends Activity {
 			}
 			catch(Exception e) {
 				// couldn't save config
-				Log.i(this.getClass().getName(), "Could not save config", e);
+				String s1 = e.getMessage();
+				Toast.makeText(this, "Could not save config: " + s1, Toast.LENGTH_SHORT).show();
+				Log.e(this.getClass().getName(), "Could not save config", e);
 			}
 		}
+	}
+
+	@Override
+	// Android calls this when this app requests permissions.
+	public void onRequestPermissionsResult(int rCode, String[] perms, int[] grants) {
+		Permissions.permissionCallback(this, rCode, perms, grants);
 	}
 
 	public void butClipA(View pView) {

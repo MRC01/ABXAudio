@@ -58,7 +58,7 @@ public class ScreenTest extends Activity {
 		trial.start();
 		unfocusAll();
 		savePos();
-		colorButtons();
+		resetButtonColors();
 		if(Config.get().switchDelay > 0)
 			Util.sleep(Config.get().switchDelay);
 		focus(WhichClip.A);
@@ -70,7 +70,7 @@ public class ScreenTest extends Activity {
 		trial.start();
 		unfocusAll();
 		savePos();
-		colorButtons();
+		resetButtonColors();
 		if(Config.get().switchDelay > 0)
 			Util.sleep(Config.get().switchDelay);
 		focus(WhichClip.B);
@@ -82,7 +82,7 @@ public class ScreenTest extends Activity {
 		trial.start();
 		unfocusAll();
 		savePos();
-		colorButtons();
+		resetButtonColors();
 		if(Config.get().switchDelay > 0)
 			Util.sleep(Config.get().switchDelay);
 		focus(WhichClip.X);
@@ -120,17 +120,14 @@ public class ScreenTest extends Activity {
 					posB = trial.clipB.sound.getPos();
 					break;
 				case X:
-					if(trial.clipX == trial.clipA)
-						posX = trial.clipA.sound.getPos();
-					else
-						posX = trial.clipB.sound.getPos();
+					posX = trial.clipX.sound.getPos();
 					break;
 				}
 			}
 		}
 	}
 
-	protected void colorButtons() {
+	protected void resetButtonColors() {
 		butPlayA.setTextColor(Color.BLACK);
 		butPlayB.setTextColor(Color.BLACK);
 		butPlayX.setTextColor(Color.BLUE);
@@ -151,7 +148,7 @@ public class ScreenTest extends Activity {
 		else
 			msg = "Trial " + (trialsComplete + 1);
 		tvTrial.setText(msg);
-		colorButtons();
+		resetButtonColors();
 	}
 
 	// shift focus to (play) the given clip
@@ -171,10 +168,9 @@ public class ScreenTest extends Activity {
 		}
 		if(Config.get().syncPlay)
 			s.unMute();
-		else {
+		else
 			s.setPos(pos);
-			s.play();
-		}
+		s.play();
 		isPlaying = wc;
 	}
 

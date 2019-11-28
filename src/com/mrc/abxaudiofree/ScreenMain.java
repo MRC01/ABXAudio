@@ -15,8 +15,10 @@ public class ScreenMain extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.screenmain);
 
-		// Ensure user has granted storage permissions to read/write my config
-		// If already granted, this does nothing
+		/* Ensure user has granted storage permissions to read/write my config
+		 * If already granted, this does nothing.
+		 * If not granted, this does not block, so the config won't load.
+		*/
 		Permissions.confirmPermissions(this);
 		try {
 			Config.get().load();

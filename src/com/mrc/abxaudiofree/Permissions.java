@@ -10,6 +10,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
+import com.mrc.util.Util;
+
 // This class handles Android permission requests
 public class Permissions {
 
@@ -34,6 +36,7 @@ public class Permissions {
 	}
 
 	/* This is the callback that Android calls after user responds to the permission request dialog.
+	 * The parent Activity/screen defines this callback and delegates the call here.
 	 * If user denies storage permission, emit a Toast so he knows what it's for.
 	 */
 	public static void permissionCallback(Activity self, int rCode, String[] perms, int[] grants) {
@@ -41,7 +44,9 @@ public class Permissions {
 		case myPermissionCode:
 			if(grants != null && grants.length > 0) {
 				if(grants[0] == PackageManager.PERMISSION_GRANTED) {
-					// User granted permission; nothing else to do.
+					// User granted permission.
+					// Now we can initialize our files
+					Util.reInitFiles();
 				}
 				else {
 					// User denied permission
